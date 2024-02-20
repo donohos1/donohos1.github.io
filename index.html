@@ -82,6 +82,16 @@
                     skills while assisting our clients at ThinkPath. We thank our sponsors for giving us the<br>
                     opportunity to improve our skills and learn about the inner workings of a real world company.
                 </p>
+                var prevScrollpos = window.pageYOffset;
+                window.onscroll = function() {
+                var currentScrollPos = window.pageYOffset;
+                if (prevScrollpos > currentScrollPos) {
+                    document.getElementById("ul").style.top = "0";
+                } else {
+                    document.getElementById("ul").style.top = "-50px";
+                }
+                prevScrollpos = currentScrollPos;
+}
             </body>
         </div>
         <div class="section" id="sprints">
