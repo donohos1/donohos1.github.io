@@ -1,76 +1,190 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <style>
-      body {margin:0;}
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Aaron McClellan">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <style>
+            html{
+                scroll-behavior: smooth;
+                overflow: scroll;
+            }
+            body {
+                margin:0;
+            }
+            .section {
+            width: 100%;
+            height: 45vh;
+            background-color: whitesmoke;
+            font-size: 50px;
+            color: black;
+            text-align: center;
+            margin: 10px 5px;
+            }
+            .section1 {
+            width: 100%;
+            height: 60vh;
+            background-color: rgb(41, 66, 90);
+            font-size: 50px;
+            color: black;
+            text-align: center;
+            margin: 10px 5px;
+            }
+            .section4 {
+            width: 100%;
+            height: 70vh;
+            background-color: whitesmoke;
+            font-size: 50px;
+            color: black;
+            text-align: center;
+            margin: 10px 5px;
+            }
+            #ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 10px;
+            overflow: hidden;
+            background-color: rgb(41, 66, 90);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            }
 
-      .section {
-        top: 10%;
-        width: 100vw;
-        height: 40vh;
-        background-color: whitesmoke;
-        font-size: 50px;
-        color: black;
-        text-align: center;
-        margin: 10px 5px;
-              }
-      ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 1;
-        overflow: hidden;
-        background-color: #33333333;
-        position: fixed;
-        top: 0;
-        width: 100%;
-      }
+            #ul a {
+            display: inline-block;
+            color: white;
+            font-family: "Lucida Console", "Courier New", monospace;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            }
 
-      li {
-        display: inline-block;
-      }
+            #ul a:hover {
+            background-color: #d2e00a;
+            }
+        </style>
+        <title>University of Dayton Thinkpath Project</title>
+    </head>
+    <body>
+        <div id="ul">
+            <a class="active" href="#home">Home</a>
+            <a href="#project">Project</a>
+            <a href="#sprints">Sprints</a>
+            <a href="#demo">Demo</a>
+            <a href="#sponsors">Sponsors</a>
+            <a href="#about">About Us</a>
+        </div>
+       <div class="section1" id="home">
+        <img src="./images/homepagere.gif" alt="thinkpath" width= "100%" height="320px" style = "padding-top: 20px;">
+        </div> 
+        <div class="section" id="project">
+            <h3 style="text-align:left; font-size: x-large; padding-left: 40px;padding-top: 10px;font-variant: small-caps;">    Project description</h3>
+            <body>
+                <a href="https://www.thinkpath.com/">
+                    <img src="./images/thinkpath.png" alt="thinkpath" width="350" height="170" style = "float:right; padding-right:100px; filter:drop-shadow(10px 10px 10px gray);">
+                </a>  
+                <p style="text-align:left; font-size: large; word-wrap: break-word; padding-left: 40px;"> 
+                    The goal of this project is to assist our clients at ThinkPath by performing a feasibility study<br> 
+                    examining and assessing the merits and viability of available<br>
+                    industry offered Customer Relationship Management (CRM) solutions, leveraging Open<br>
+                    Source or Off-the-Shelf (OTS) resources, intended as a replacement for their existing<br>
+                    ThinkPRO application.
+                </p>              
+                <p style="text-align:left; font-size: medium; word-wrap: break-word; padding-left: 40px; color: rgb(87, 81, 81)">
+                    Our goal as a team for Capstone II, is to grow our knowledge base and improve our development<br>
+                    skills while assisting our clients at ThinkPath. We thank our sponsors for giving us the<br>
+                    opportunity to improve our skills and learn about the inner workings of a real world company.
+                </p>
+            </body>
+        <script>
+            var prevScrollpos = window.pageYOffset;
+            window.onscroll = function() {
+            var currentScrollPos = window.pageYOffset;
+            if (prevScrollpos > currentScrollPos) {
+                document.getElementById("ul").style.top = "0";
+            } else {
+                document.getElementById("ul").style.top = "-50px";
+            }
+            prevScrollpos = currentScrollPos;
+        }
+        </script>
+        </div>
+        <div class="section" id="sprints">
+            <h3 style="text-align:left;font-size: x-large; padding-left: 40px;padding-top: 10px; font-variant: small-caps;">    Sprints</h3>
+                <p style = "text-align:left; font-size: large; word-wrap: break-word; padding-left: 40px;">
+                    For our first sprint, we spent time researching multiple Customer Relationship Management (CRM) solutions <br>
+                    analyzing them and trying to find the most optimal solution for our client. During this time our group split <br>
+                    into subteams to research more in depth and we found 3 possibilities: Pipedrive, Capsule and Odoo.<br>
+                    Our team created a report for each CRM along with a short presentation which we presented to our client. <br>
+                    After careful consideration our client wants us to further look into Pipedrive and Capsule.
+                </p>
+                <a href="https://docs.google.com/presentation/d/1RspbrOla7mYTLJseChPvy9oLM0syrjSUPMKWqxwMv30/edit?usp=sharing" style = "float:left; font-size: medium;padding-left: 40px;">Sprint 1 Presentation</a>
 
-      li a {
-        display: block;
-        color: black;
-        font-family: "Lucida Console", "Courier New", monospace;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-      }
-
-      li a:hover:not(.active) {
-        background-color: rgba(17, 17, 17, 0.438);
-      }
-
-      .active {
-        background-color: #d2e00a;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="Navigation">
-      <ul>
-        <li><a class="active" href="#home">Home</a></li>
-        <li><a href="#project">Project</a></li>
-        <li><a href="#demo">Demo</a></li>
-        <li><a href="#sponsors">Sponsors</a></li>
-        <li><a href="#about">About Us</a></li>
-      </ul>
-    </div>
-    <div class="section" id="home">
-      Home Page
-    </div>
-    <div class="section" id="project">
-      Project
-    </div>
-    <div class="section" id="demo">
-      Demos
-    </div>
-    <div class="section" id="sponsors">
-      Sponsors
-    </div>
-    <div class="section" id="about">
-      About Us
-    </div>
-  </body>
+        </div>
+        <div class="section4" id="sponsors" style="justify-content: space-between;padding-top: 10px;font-variant: small-caps;">
+            <h3 style="text-align:left;font-size: x-large; padding-left: 40px;">    Sponsors</h3>
+            <figure style = "float:left; padding-left: 40px;">
+                <img src="./images/Bob.png" alt="thinkpath" width="200" height="200">
+                <figcaption style = "font-size: large;">Bob Trick </figcaption>
+                <figcaption style = "font-size: medium;">President/COO</figcaption>
+            </figure>
+            <figure style = "float:left; padding-left: 40px;">
+                <img src="./images/Ken.png" alt="thinkpath" width="200" height="200">
+                <figcaption style = "font-size: large;">Ken Stephenson </figcaption> 
+                <figcaption style = "font-size: medium;">Director of Information Technology</figcaption>
+            </figure>
+            <figure style = "float:left; padding-left: 40px;">
+                <img src="./images/Stiffy.jpg" alt="thinkpath" width="200" height="200">
+                <figcaption style = "font-size: large">Nick Stiffler</figcaption> 
+                <figcaption style = "font-size: medium;">Assistant Professor</figcaption>
+                <figcaption style = "font-size: medium;">University of Dayton</figcaption>
+            </figure>
+        </div>
+        <div class="section" id="about">
+            <h3 style="text-align:left;font-size: x-large; padding-left: 20px;padding-top: 10px;font-variant: small-caps;">    About Us</h3>
+            <figure style = "float:left; padding-left: 40px;">
+                <img src="" alt="" width="200" height="200">
+                <figcaption style = "font-size: large"> Danny Lambert </figcaption> 
+                <figcaption style = "font-size: medium;"> Major: Computer Information Systems </figcaption>
+                <figcaption style = "font-size: medium;"> Minor(s): Business Analytics </figcaption>
+            </figure>
+            <figure style = "float:left; padding-left: 40px;">
+                <img src="" alt="" width="200" height="200">
+                <figcaption style = "font-size: large"> Skyler Donoho </figcaption> 
+                <figcaption style = "font-size: medium;"> Major: Computer Science </figcaption>
+                <figcaption style = "font-size: medium;"> Minor(s): Social Work & Mathematics  </figcaption>
+            </figure>
+            <figure style = "float:left; padding-left: 40px;">
+                <img src="" alt="" width="200" height="200">
+                <figcaption style = "font-size: large"> Joseph Johnson </figcaption> 
+                <figcaption style = "font-size: medium;"> Major: Computer Information Systems </figcaption>
+                <figcaption style = "font-size: medium;"> Minor: Business Administration </figcaption>
+            </figure>
+            <figure style = "float:left; padding-left: 40px;">
+                <img src="" alt="" width="200" height="200">
+                <figcaption style = "font-size: large"> Mykaella Romain </figcaption> 
+                <figcaption style = "font-size: medium;"> Major: Computer Information Systems </figcaption>
+                <figcaption style = "font-size: medium;"> Minor: Medicine in Society  </figcaption>
+            </figure>
+            <figure style = "float:left; padding-left: 40px;">
+                <img src="" alt="" width="200" height="200">
+                <figcaption style = "font-size: large"> Jonathan Pieroni </figcaption> 
+                <figcaption style = "font-size: medium;"> Major: Computer Science </figcaption>
+                <figcaption style = "font-size: medium;"> Minor: Mathematics </figcaption>
+                <figcaption style = "font-size: medium;"> Concentration: Cyber Defense </figcaption>
+            </figure>
+            <figure style = "float:left; padding-left: 40px;">
+                <img src="" alt="" width="200" height="200">
+                <figcaption style = "font-size: large"> Abril Robinson </figcaption> 
+                <figcaption style = "font-size: medium;"> Major: Computer Information Systems </figcaption>
+                <figcaption style = "font-size: medium;"> Minor: Sociology  </figcaption>
+            </figure>
+            <figure style = "float:left; padding-left: 40px;">
+                <img src="" alt="" width="200" height="200">
+                <figcaption style = "font-size: large"> Aaron McClellan </figcaption> 
+                <figcaption style = "font-size: medium;"> Major: Computer  </figcaption>
+                <figcaption style = "font-size: medium;"> Minor:   </figcaption>
+            </figure>
+        </div>
+    </body>
 </html>
